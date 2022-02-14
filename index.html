@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Demostyle.css">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+    
+    
+</head>
+<body>
+    <div>
+      
+        <main>
+            <div id="landing">  
+                <div id="landing-text">
+                    <div id="landing-text-inner">
+                        <h1>3D Demo</h1>
+                        <h2>Showcase your Art</h2>
+                        <h6>Exodia &copy; 2020</h6>
+                        <a href="#images" class="btn" id="view-work">
+                            View Work
+                        </a>
+                        
+                    </div>
+                </div>
+              
+                    <img src="img/poster.png" alt="" id="landing-image">
+            
+                
+                
+            </div>
+
+            <div id="images">
+                <div id="header">
+                    <h2>Our Work</h2>
+                </div>
+                <model-viewer class="models"
+                src="Assets/bottle/model.gltf"
+                alt="A 3D model of an astronaut"
+                
+                shadow-intensity="1"
+                data-toggle="modal"
+                data-target="#myModal"
+                >
+                </model-viewer>
+                
+                <div class="caption">
+                    <h3>Photo One</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos?</p>
+                </div>
+                <model-viewer class="models"
+                src="Assets/table/model.gltf"
+                alt="A 3D model of an astronaut"
+                
+                shadow-intensity="1"
+                camera-controls
+                auto-rotate>
+                </model-viewer>
+                <div class="caption">
+                    <h3>Photo two</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos?</p>
+                </div>
+                <model-viewer class="models"
+                camera-orbit="45deg 90deg .1m" 
+                src="Assets/Armory/scene.gltf"
+                alt="A 3D model of an astronaut"
+                
+              
+                camera-controls
+                >
+                </model-viewer>
+                <div class="caption">
+                    <h3>Photo three</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos?</p>
+                </div>
+                <model-viewer class="models"
+                poster="img/poster.png"
+                src="Assets/boxAnim/box.glb"
+                camera-orbit="45deg 55deg 5m" 
+                shadow-intensity="1"
+                camera-controls
+                auto-rotate>
+                </model-viewer>
+                <div class="caption">
+                    <h3>Photo four</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos?</p>
+                </div>
+ 
+            </div>
+        </main>
+        <div id="myModal" class="modal">
+            
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Demo</h4>                  
+                </div>
+                <div class="modal-body " >
+                  <div class="card" style="height: 75vh; ">
+                    <div class="card-body" >
+                        <model-viewer 
+                        src="Assets/Ak/scene.gltf"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate
+                        camera-controls
+                          >
+                </model-viewer>
+                <button type="button" class="btn" id="closeBtn">Close</button>
+                    </div>
+
+                  </div>
+                </div>
+                
+                
+              </div>
+          
+            
+          </div>
+        
+       
+        <footer>
+            <h6>Exodia &copy; 2020</h6>
+            
+        </footer>
+    </div>
+
+
+
+    <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+
+   <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module"
+    src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+    src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js">
+</script>
+</body>
+</html>
